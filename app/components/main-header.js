@@ -1,11 +1,21 @@
+//components imports
 import Link from "next/link"
+import Image from "next/image"
+import MainHeaderBackground from "./header-brackgound"
+
+//Assets imports
 import logoImg from '@/assets/logo.png'
+
+// Css imports
 import classes from './main-header.module.css'
 
 export default function MainLayout({children}){
-    return <header className={classes.header}>
+    return (
+    <>
+    <MainHeaderBackground/>
+    <header className={classes.header}>
       <Link className={classes.logo} href="/">
-        <img src={logoImg.src} alt="A plate with food on it"/>
+        <Image src={logoImg} alt="A plate with food on it" priority/>
         NextLevel Food
       </Link>
 
@@ -20,4 +30,5 @@ export default function MainLayout({children}){
         </ul>
       </nav>
     </header>
+    </>)
 }
