@@ -2,6 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import MainHeaderBackground from "./header-brackgound"
+import NavLink from "./nav-link"
 
 //Assets imports
 import logoImg from '@/assets/logo.png'
@@ -22,10 +23,10 @@ export default function MainLayout({children}){
       <nav className={classes.nav}>
         <ul>
             <li>
-                <Link href="/meals">Browse Meals</Link>
+                <NavLink href="/meals">Browse Meals</NavLink>
             </li>
             <li>
-                <Link href="/community">Browse Community</Link>
+                <NavLink href="/community">Browse Community</NavLink>
             </li>
         </ul>
       </nav>
